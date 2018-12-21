@@ -8,7 +8,7 @@ import numpy as np
 from skimage import io
 
 from keras.models import Sequential
-from keras.layers import Dense, Conv3D, MaxPooling3D
+from keras.layers import Dense, Conv3D, MaxPooling3D, Flatten
 from keras.initializers import glorot_uniform
 from keras.callbacks import EarlyStopping
 
@@ -29,7 +29,6 @@ from sklearn.model_selection import train_test_split
 
 # Fixing the Random Generators
 np.random.seed(1)
-tf.set_random_seed(2)
 
 path = r'C:\Users\Karandeep\Downloads\Deep Learning\Project\WB cells\dataset-master'
 
@@ -52,11 +51,11 @@ path = r'C:\Users\Karandeep\Downloads\Deep Learning\Project\WB cells\dataset-mas
 #Defining the function that can read each image out of the ImageCollection object and also RESHAPE it for CNN input
 def custom_load_func_images(images): 
     images = io.imread(images)                            #Reads a single image
-    images = np.reshape(images, (img.shape[0],img.shape[1],img.shape[2],1)) #Reshapes the image so that it can be used as input to the CNN
+    images = np.reshape(images, (images.shape[0],images.shape[1],images.shape[2],1)) #Reshapes the image so that it can be used as input to the CNN
     return images
 
 #The load_func function usually defines the task that needs to be performed on each element of the images dataset
-images = io.ImageCollection(path + '/JPEGImages/BloodImage_*.jpg', load_func = custom_load_func_images)
+images = io.ImageCollection(path + '/BloodImage_*.jpg', load_func = custom_load_func_images)
 print('No.of images total: ' + str(len(images)))
 print('Dimensions of a single image: ' + str(images[0].shape))
 
@@ -65,16 +64,23 @@ height = images[0].shape[0] #images[0] denotes the first image out of the datase
 width = images[0].shape[1]
 n_channels = images[0].shape[2]
 n_images = len(images)
-n_classes = 4
+n_classes = 5
 
 print(height)
 print(width)
 print(n_channels)
 
-#Now we need to fetch the LABELS separately from the Excel labels.csv
-labels = pd.read_csv(path + '/labels.csv', usecols = ['category'])
+print(n_classes)
 
-labels.iloc[0:5,]
+#Now we need to fetch the LABELS separately from the Excel labels.csv
+labels = pd.read_csv(path + '/labels.csv', usecols = ['NEUTROPHIL','EOSINOPHIL','LYMPHOCYTE','MONOCYTE','BASOPHIL'])
+labels.iloc[5:19,]
+
+#Imputing NaN values with zero. As per the Excel, the nulls mean zero actually
+labels.fillna(value = 0, inplace = True)
+labels.iloc[5:19,]
+
+labels.shape
 
 #Building CNN model
 model = Sequential()
@@ -89,17 +95,29 @@ model.add(Conv3D(filters = 10, kernel_size = (3,3,3), strides=(1, 1, 1), input_s
                  kernel_initializer='glorot_uniform', 
                  bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None,
                  kernel_constraint=None, bias_constraint=None))
+model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
 model.add(Conv3D(filters = 10, kernel_size = (3,3,3), strides=(1, 1, 1),
                  padding='same', data_format=None, activation=None, use_bias=True, #dilation_rate=(1, 1, 1), 
                  kernel_initializer='glorot_uniform', 
                  bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None,
                  kernel_constraint=None, bias_constraint=None))
 model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
+model.add(Conv3D(filters = 10, kernel_size = (3,3,3), strides=(1, 1, 1),
+                 padding='same', data_format=None, activation=None, use_bias=True, #dilation_rate=(1, 1, 1), 
+                 kernel_initializer='glorot_uniform', 
+                 bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None,
+                 kernel_constraint=None, bias_constraint=None))
+model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
+model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
+model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
+model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
+model.add(MaxPooling3D(pool_size=(2, 2, 1), strides=None, padding='valid', data_format=None))
+model.add(Flatten())
 
 #Adding Multi-Layer Perceptron layers
-model.add(Dense(10, activation='sigmoid', use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', 
-                kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, 
-                bias_constraint=None))
+# model.add(Dense(10, activation='sigmoid', use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', 
+#                 kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, 
+#                 bias_constraint=None))
 model.add(Dense(n_classes, activation='softmax', use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', 
                 kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, 
                 bias_constraint=None))
@@ -112,12 +130,11 @@ model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = [
           
 #Fit model to the data
 callback_ES = EarlyStopping(monitor='val_loss', min_delta=0)
-model.fit(images, ('1','0','0','0'), batch_size=32, epochs=5,
+model.fit(np.asarray(images), labels, validation_split = 0.3, batch_size=64, epochs=5,
                    #validation_data=(X_test, y_test), 
           callbacks = [callback_ES])
 #Evaluate
 # model.evaluate(X_test, y_test)
-
 
 
 References:
