@@ -1,0 +1,17 @@
+This is a very rough draft of some of the best resources for various Machine Learning topics:
+
+MACHINE LEARNING
+Outlier Detection
+https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
+Correcting Imbalanced datasets
+https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/
+
+NATURAL LANGUAGE PROCESSING
+Set of 2 articles. Easy intuitive explanation of basics behind NLP, and classification of text (User reviews Sentiment Analysis)
+https://medium.com/@ageitgey/natural-language-processing-is-fun-9a0bff37854e
+
+DEEP LEARNING
+Coursera course by Andrew NG
+One of the best DL resources. Youtube has some videos from this course, so you may want to check them out before buying this course.
+Batch Size and Epochs and Iterations
+https://towardsdatascience.com/epoch-vs-iterations-vs-batch-size-4dfb9c7ce9c9
