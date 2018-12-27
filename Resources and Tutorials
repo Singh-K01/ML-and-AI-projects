@@ -1,6 +1,8 @@
 This is a very rough draft of some of the best resources for various Machine Learning topics:
 
 MACHINE LEARNING
+Data Pre-processing
+https://www.cs.indiana.edu/~predrag/classes/2010springi211/week6_m.pdf
 Outlier Detection
 https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
 Correcting Imbalanced datasets
