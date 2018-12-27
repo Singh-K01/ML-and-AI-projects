@@ -5,10 +5,16 @@ Data Pre-processing
 https://www.cs.indiana.edu/~predrag/classes/2010springi211/week6_m.pdf
 Outlier Detection
 https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
+Correlation detection among Features
+1. Numerical-Numerical: Pearson's Correlation Coefficient
+2. Categorical-Categorical: Chi-squared null hypothesis 
+http://www.insightsbot.com/blog/2AeuRL/chi-square-feature-selection-in-python
+3. Categorical-Numerical: 
 Correcting Imbalanced datasets
 https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/
 Kappa performance measure
 https://stats.stackexchange.com/questions/82162/cohens-kappa-in-plain-english
+
 
 NATURAL LANGUAGE PROCESSING
 Set of 2 articles. Easy intuitive explanation of basics behind NLP, and classification of text (User reviews Sentiment Analysis)
