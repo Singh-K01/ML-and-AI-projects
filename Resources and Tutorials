@@ -3,6 +3,9 @@ This is a very rough draft of some of the best resources for various Machine Lea
 MACHINE LEARNING
  Data Pre-processing
  https://www.cs.indiana.edu/~predrag/classes/2010springi211/week6_m.pdf
+ 
+ Data Visualizations
+ https://seaborn.pydata.org/tutorial/distributions.html
 
  Outlier Detection
  https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
