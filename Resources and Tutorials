@@ -39,5 +39,8 @@ NATURAL LANGUAGE PROCESSING
  Set of 2 articles. Easy intuitive explanation of basics behind NLP, and classification of text (User reviews Sentiment Analysis)
  https://medium.com/@ageitgey/natural-language-processing-is-fun-9a0bff37854e
  
+ Characters decoding (French, Latin etc)
+ http://www.cogsci.nl/blog/a-simple-explanation-of-character-encoding-in-python.html
+ 
 NLP with Deep Learning
 Sentiment CLassification in IMDB User reviews: https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
