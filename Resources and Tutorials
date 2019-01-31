@@ -46,5 +46,11 @@ NATURAL LANGUAGE PROCESSING
  Regex
  http://courses.ischool.berkeley.edu/i256/f06/papers/regexps_tutorial.pdf
  
+ Topic Modelling
+ https://medium.com/nanonets/topic-modeling-with-lsa-psla-lda-and-lda2vec-555ff65b0b05
+ 
+ LDA (Latent Dirichlet Allocation)
+ https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/
+ 
 NLP with Deep Learning
 Sentiment CLassification in IMDB User reviews: https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
