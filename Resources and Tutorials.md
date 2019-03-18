@@ -51,7 +51,6 @@ NATURAL LANGUAGE PROCESSING
  
  Topic Modelling
  https://medium.com/nanonets/topic-modeling-with-lsa-psla-lda-and-lda2vec-555ff65b0b05
- 
  LDA (Latent Dirichlet Allocation)
  https://www.linkedin.com/pulse/lda-explanation-gaurhari-dass/
  https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/
@@ -60,8 +59,10 @@ NATURAL LANGUAGE PROCESSING
  It's usage/pros/cons:
  https://pythonhosted.org/trustedanalytics/LdaNewPlugin_Summary.html
  
-NLP with Deep Learning
-Sentiment CLassification in IMDB User reviews: https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
+ An Embarrassingly Simple Approach for Transfer Learning from Pretrained Language Models”: Paper Discussion
+ https://hackernoon.com/an-embarrassingly-simple-approach-for-transfer-learning-from-pretrained-language-models-paper-7153f364cd47
+ 
+ Sentiment CLassification in IMDB User reviews: https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
 
-Interesting Reposotories:
-github.com/stepthom
+ Interesting Reposotories:
+ github.com/stepthom
