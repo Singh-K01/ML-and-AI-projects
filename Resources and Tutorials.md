@@ -64,6 +64,9 @@ NATURAL LANGUAGE PROCESSING
  
  Sentiment CLassification in IMDB User reviews: https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/
 
+ OOV (Out of Vocabulary) Embeddings problem
+ https://medium.com/cisco-emerge/creating-semantic-representations-of-out-of-vocabulary-words-for-common-nlp-tasks-842dbdafba18
+ 
  Word-Segmentation in Speech Transcriptions
  Google-Sentencepiece
  https://github.com/google/sentencepiece
