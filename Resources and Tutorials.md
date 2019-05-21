@@ -76,6 +76,7 @@ NATURAL LANGUAGE PROCESSING
  https://www.mitpressjournals.org/doi/pdf/10.1162/089120101317066113
  
  Speech Recognition and Speech-to-Text
+ https://medium.com/@ageitgey/machine-learning-is-fun-part-6-how-to-do-speech-recognition-with-deep-learning-28293c162f7a
  https://www.tutorialspoint.com/artificial_intelligence_with_python/artificial_intelligence_with_python_speech_recognition.htm
  
  Interesting Reposotories:
