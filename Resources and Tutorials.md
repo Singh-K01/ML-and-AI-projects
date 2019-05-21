@@ -1,4 +1,4 @@
-This is a very rough draft of some of the best resources for various Machine Learning topics:
+This is a rough draft of some of the best resources for various Machine Learning topics:
 
 MACHINE LEARNING
  Data Pre-processing
@@ -74,6 +74,9 @@ NATURAL LANGUAGE PROCESSING
  https://dan-blanchard.github.io/papers/proposal.pdf
  A Statistical Model for Word Discovery in Transcribed Speech
  https://www.mitpressjournals.org/doi/pdf/10.1162/089120101317066113
+ 
+ Speech Recognition and Speech-to-Text
+ https://www.tutorialspoint.com/artificial_intelligence_with_python/artificial_intelligence_with_python_speech_recognition.htm
  
  Interesting Reposotories:
  github.com/stepthom
