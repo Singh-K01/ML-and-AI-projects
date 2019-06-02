@@ -9,6 +9,9 @@ MACHINE LEARNING
 
  Outlier Detection
  https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
+ 
+ Train Test Split, k-fold CV, Stratified CV
+ https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/
 
  Correlation detection among Features
  1. Numerical-Numerical: Pearson's Correlation Coefficient
