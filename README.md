@@ -29,7 +29,7 @@ Please browse through each folder to access the individual projects.
 ## Requirements
 
 Few main requirements are as below:
-* Python 2.7 or newer
+* Python 3.6.5 or above
 * NumPy & SciPy
 
 ## Contributing
