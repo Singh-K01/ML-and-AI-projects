@@ -29,7 +29,7 @@ Lymphocyte | 25%
 Monocyte | 6%
 
 ## The dataset
-White blood cells each belong to one of five sub-types: Basophil, Eosinophil, Lymphocyte, Monocyte, Neutrophil. The dataset is a labelled dataset with a supervised learning problem. There are approximately 3,000 images for each of 4 different cell types - Eosinophil, Lymphocyte, Monocyte, and Neutrophil. It can be found on Kaggle: https://www.kaggle.com/paultimothymooney/blood-cells
+White blood cells each belong to one of five sub-types: Basophil, Eosinophil, Lymphocyte, Monocyte, Neutrophil. The dataset is a labelled dataset with a supervised learning problem. There are approximately 410 original (non-augmented) images for each of 4 different cell types - Eosinophil, Lymphocyte, Monocyte, and Neutrophil. It can be found on Kaggle: https://www.kaggle.com/paultimothymooney/blood-cells
 
 ## Project scope
 This project was a proof-of-concept for utilizing CNNs for detection of WBC cell types using image input data.
