@@ -33,7 +33,7 @@ This project was a proof-of-concept for utilizing CNNs for detection of WBC cell
 
 ## The dataset
 White blood cells each belong to one of five sub-types: Basophil, Eosinophil, Lymphocyte, Monocyte, Neutrophil. The dataset is a labelled dataset with a supervised learning problem. There are approximately 410 original (non-augmented) images for each of 5 different cell types - Eosinophil, Lymphocyte, Monocyte, Basophil and Neutrophil. It can be found on Kaggle: https://www.kaggle.com/paultimothymooney/blood-cells
-We scoped out BAsophils and that reduced our dataset to a total of 349 images representing four types of WBC (88 Eosinophils, 33 Lymphocytes, 207 Neutrophils, 21 Monocytes). This is a much smaller dataset than is standard in using neural networks for image classification, but our method could be extended easily, likely with stronger results, when more data is acquired.
+We scoped out BAsophils and that reduced our dataset to a total of 347 images representing four types of WBC (88 Eosinophils, 33 Lymphocytes, 207 Neutrophils, 20 Monocytes). This is a much smaller dataset than is standard in using neural networks for image classification, but our method could be extended easily, likely with stronger results, when more data is acquired.
 
 ## Note about the POC limitations
 The original images are 640x480 pixels with three colour channels (RGB), but are imported into the training algorithms as resized 160x120 images to reduce the computational cost of the algorithm. This is because we had access to limited resources at the time of the project.
