@@ -1,33 +1,36 @@
-# Project Title
-
-This repository showcases a subset of the author's Machine Learning development projects built using Python.
-
 ## Table of contents
 
+* [Title](#Title)
+* [Description](#Description)
 * [Getting Started](#Getting-Started)
-   * [](#)
+* [List of projects](#List-of-rojects)
 * [Requirements](#Requirements)
-* [Installing](#Installing)
-* [Example use cases](#Example-use-cases)
-* [Deployment](#Deployment)
 * [Contributing](#Contributing)
 * [Authors](#Authors)
 * [License](#License)
 * [FAQs](#FAQs)
 * [Acknowledgments](#Acknowledgments)
 
+## Title
+
+Machine Learning projects
+
+## Description
+
+This repository contain projects on Natural Language Processing, Deep Learning and standard Machine Learning. The code is available for public and commercial use provided you follow licensing requirements for underlying artifacts used in the projects/ 
+
 ## Getting Started
+
+Please browse through each folder to access the individual projects.
+
+## List of projects
+1. 
 
 ## Requirements
 
+Few main requirements are as below:
 * Python 2.7 or newer
 * NumPy & SciPy
-
-## Installing
-
-## Example use cases
-
-## Deployment
 
 ## Contributing
 
@@ -41,4 +44,4 @@ Please read [CONTRIBUTING.md] for details on the code of conduct and the process
 ## FAQs
 
 ## Acknowledgments
-
+Some of these projects used inputs from school team members of the author, but the code is the author's own creation.
