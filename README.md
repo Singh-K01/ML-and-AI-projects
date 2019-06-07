@@ -24,7 +24,9 @@ This repository contain projects on Natural Language Processing, Deep Learning a
 Please browse through each folder to access the individual projects.
 
 ## List of projects
-1. 
+1. Bankruptcy prediction using sampling techniques
+2. Topic modelling for IMDB movie reviews and evaluating Perplexity as a performance measure
+3. Classifying White Blood Cells (WBCs) using Convolutional Neural Networks (CNNs) on stained images
 
 ## Requirements
 
