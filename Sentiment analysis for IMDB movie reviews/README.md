@@ -47,3 +47,45 @@ From Table 3 in the paper, we see that for 95% of the data, using a degree modif
 
 #### Scoring of the algorithm:
 Sourcing from https://github.com/cjhutto/vaderSentiment: “The compound score is computed by summing the valence scores of each word in the lexicon, adjusted according to the rules, and then normalized to be between -1 (most extreme negative) and +1 (most extreme positive). This is the most useful metric if you want a single unidimensional measure of sentiment for a given sentence.”
+
+
+## Machine Learning approach - Building various Text Classifiers
+The idea was to build the best Text classifier possible, and the iterations involved trying out various algorithms, hyperparameters, and text pre-processing techniques to get the best Accuracy, Specificity and Sensitivity.
+
+### Text Pre-processing Techniques used
+Tokenization, Stop words removal, Stemming, Bi-grams, Tri-grams, CountVectorize, TF-IDF
+
+### ML classifier algorithms tried
+LogisticRegression, Random Forest, Decision Trees
+GridSearchCV Hyperparameter tuning:
+For LogisticRegression: [{'C': [0.01, 0.1, 0.5, 1.0, 10, 100], 'class_weight': ['balanced']}]
+For RandomForestClassifier: [{'n_estimators':[5,10],'criterion':['entropy',’gini’]}]
+For DecisionTreeClassifier: [{'criterion':['entropy','gini'], 'max_features':['auto','sqrt','log2']}]
+Measure of fit for GridSearchCV was chosen to be Accuracy.
+
+### Vectorization Techniques used
+CountVectorizer: min_df = 15, max_df = 0.3
+TFIDF Vectorizer: min_df = 15, max_df = 0.3
+
+### Performance measures for Classifiers
+Accuracy, Sensitivity, Specificity
+Since I have ZERO faith in the under-the-hood calculations of the sklearn.metrics performance measures, I went ahead and wrote my own custom functions for calculating measures.
+
+## Things I could have tried
+•	Try to topic model the dataset, and add Topics as features for sentiment prediction
+•	Doc2Vec as features
+
+## Results
+LogisticRegression with hyperparameters: {'C': 0.1, 'class_weight': 'balanced'} and Vectorization = Count-Vectorizer gave the best performance. (Logistic Regression with TF-IDF gave slightly better accuracy but other metrics were low)
+
+## Comparing the two approaches
+1. Lexicon (VADER) was not that impressive, with lower scores on each of the metrics Accuracy, Sensitivity and Specificity compared to the ML model. ML performed better.
+2. Out of 100% total reviews, 50% were Negative and 50% were Positive, however this is how the different approaches performed:
+o	Lexicon: Was only able to correctly predict 54% of the total Negative Reviews but was able to predict 85% of the total Positive Reviews
+o	Machine Learning Classifier: Was able to predict 86% of the total Negative Reviews and 87% of the Positive Reviews which is great.
+o	Therefore, performance at predicting positive reviews was nearly equal for both Lexicon and ML approach for this dataset.
+3. Another observation was that Lexicon approach was fast in training, but ML took some more time to train, comparatively.
+
+
+
+
