@@ -82,6 +82,7 @@ NATURAL LANGUAGE PROCESSING
  https://medium.com/@ageitgey/machine-learning-is-fun-part-6-how-to-do-speech-recognition-with-deep-learning-28293c162f7a
  https://www.tutorialspoint.com/artificial_intelligence_with_python/artificial_intelligence_with_python_speech_recognition.htm
  https://blog.manash.me/building-a-dead-simple-word-recognition-engine-using-convnet-in-keras-25e72c19c12b
+ https://github.com/simoninithomas/DNN-Speech-Recognizer/blob/master/vui_notebook.ipynb
  
  Interesting Reposotories:
  github.com/stepthom
